@@ -1,0 +1,49 @@
+<mat-toolbar id="header" color="primary">
+  <!-- descktop -->
+  <div id="menu">
+    <button mat-raised-button color="primary" (click)="changeShowMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    {{nameCompany}}
+  </div>
+  <div id="bread-crumbs">pagina</div>
+  <div id="opciones">
+    <button mat-raised-button color="primary">
+      <mat-icon>store</mat-icon>
+    </button>
+    <button mat-raised-button color="primary">
+      <mat-icon>face</mat-icon>
+    </button>
+  </div>
+  <!-- tablet -->
+  <div id="menu-tablet">
+    <button mat-mini-fab color="primary" (click)="changeShowMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    name of company
+  </div>
+  <div id="bread-crumbs-tablet">pagina</div>
+  <div id="opciones-tablet">
+    <button mat-mini-fab color="primary">
+      <mat-icon>store</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary">
+      <mat-icon>face</mat-icon>
+    </button>
+  </div>
+  <!-- movile -->
+  <div id="menu-movile">
+    <button mat-icon-button (click)="changeShowMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div id="bread-crumbs-movile">pagina</div>
+  <div id="opciones-movile">
+    <button mat-icon-button>
+      <mat-icon>store</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>face</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

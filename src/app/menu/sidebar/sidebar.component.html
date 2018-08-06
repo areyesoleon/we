@@ -1,0 +1,32 @@
+<mat-sidenav-container id="sidebar">
+  <mat-sidenav mode="side" [opened]="menu.show" color="primary" id="sidenav">
+    <mat-accordion *ngFor="let module of menu.opciones">
+      <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{module.module}}
+          </mat-panel-title>
+          <mat-icon color="primary" class="icon">{{module.icon}}</mat-icon>
+        </mat-expansion-panel-header>
+        <a *ngFor="let page of module.pages" href="#" mat-raised-button color="primary" class="page">
+          <mat-icon>
+            {{page.icon}}
+          </mat-icon>
+        </a>
+        <a *ngFor="let page of module.pages" href="#" mat-mini-fab color="primary" class="page-tablet">
+            <mat-icon>
+              {{page.icon}}
+            </mat-icon>
+          </a>
+          <a *ngFor="let page of module.pages" href="#" mat-icon-button color="primary" class="page-movile">
+              <mat-icon>
+                {{page.icon}}
+              </mat-icon>
+            </a>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+  <mat-sidenav-content id="content-root">
+    <ng-content></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>

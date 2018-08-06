@@ -1,0 +1,61 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#header #menu button {
+  margin-right: 0.25rem;
+}
+
+#header #opciones button {
+  margin-right: 0.25rem;
+}
+
+/* descktop */
+@media only screen and (min-width: 1024px) {
+  #menu, #opciones, #bread-crumbs {
+    display: block;
+  }
+  #menu-movile, #opciones-movile, #bread-crumbs-movile {
+    display: none;
+  }
+  #menu-tablet, #opciones-tablet, #bread-crumbs-tablet {
+    display: none;
+  }
+}
+
+/* tablet */
+@media only screen and (max-width: 1023px) {
+  #menu, #opciones, #bread-crumbs {
+    display: none;
+  }
+  #menu-movile, #opciones-movile, #bread-crumbs-movile {
+    display: none;
+  }
+  #menu-tablet, #opciones-tablet, #bread-crumbs-tablet {
+    color: white;
+    display: block;
+  }
+  #header #menu-tablet button {
+    margin-right: 0.50rem;
+  }
+  #header #opciones-tablet button {
+    margin-right: 0.50rem;
+  }
+}
+
+/* movile */
+@media only screen and (max-width: 600px) {
+  #menu, #opciones, #bread-crumbs {
+    display: none;
+  }
+  #menu-tablet, #opciones-tablet, #bread-crumbs-tablet {
+    display: none;
+  }
+  #menu-movile, #opciones-movile, #bread-crumbs-movile {
+    display: block;
+    color: white;
+  }
+}
