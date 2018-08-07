@@ -26,6 +26,13 @@
   margin: 0.25rem;
 }
 
+#sidebar #content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center
+}
+
 /* descktop */
 
 @media only screen and (min-width: 1024px) {

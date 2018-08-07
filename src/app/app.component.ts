@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { isNil } from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public core: any;
-  constructor() { }
-  ngOnInit() {
-    this.core = {
+  constructor() {
+    let core = {
       company: {
         name: 'We Home',
         id: '0'
@@ -40,6 +40,12 @@ export class AppComponent implements OnInit {
         ]
       }
     }
+    if(isNil(localStorage.getItem('core'))){
+      localStorage.setItem('core', JSON.stringify(core));
+      location.reload();
+    } else {
+      this.core = JSON.parse(localStorage.getItem('core'));
+    }
   }
-
+  ngOnInit() {}
 }

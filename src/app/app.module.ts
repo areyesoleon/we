@@ -8,14 +8,21 @@ import { environment } from '../environments/environment';
 //Menu
 import { MenuModule } from './menu/menu.module';
 
+//Modulos we
+import { PagesModule } from './pages/pages.module';
+import { APP_ROUTES } from './app.routes';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
+    APP_ROUTES,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    MenuModule
+    MenuModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
